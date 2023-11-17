@@ -105,3 +105,52 @@ a {
     color-scheme: dark;
   }
 }
+.page-header {
+  background-color: #000AF0;
+  padding: 10px;
+  position: relative;
+  height: 60px;
+
+}
+
+.login-link_header {
+  position: absolute;
+  top: 10;
+  right: -850px;
+  color: #fff;
+  text-decoration: none;
+}
+.login-link_header::after {
+  content: " ";
+  display: inline-block;
+  height: 25px;
+  width: 1px;
+  background-color: rgba(255,255,255,.1);
+  margin-left: 12px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+.login-link_header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px; /* Höhe des Unterstrichs */
+  background-color: #fff; /* Farbe des Unterstrichs */
+  transform: scaleX(0); /* Setze die horizontale Skalierung auf 0, um den Unterstrich zu verstecken */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease; /* Übergangseigenschaften */
+}
+
+.login-link_header:hover::before {
+  transform: scaleX(1); /* Setze die horizontale Skalierung auf 1, um den Unterstrich anzuzeigen */
+}
+.navigation {
+  display:flex;
+  justify-content: space-around;
+}
+
+.user-icon_header {
+  transform: translate(-8px, -3px);
+}
