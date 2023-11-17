@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -106,49 +106,53 @@ a {
   }
 }
 .page-header {
-  background-color: #000AF0;
+  background-color: #000af0;
   padding: 10px;
   position: relative;
   height: 60px;
-
 }
 
 .login-link_header {
   position: absolute;
-  top: 10;
-  right: -850px;
+  top: 30%;
+  right: -42%;
   color: #fff;
   text-decoration: none;
 }
 .login-link_header::after {
   content: " ";
   display: inline-block;
-  height: 25px;
+  height: 20px;
   width: 1px;
-  background-color: rgba(255,255,255,.1);
-  margin-left: 12px;
+  background-color: #fff;
+  margin-left: 8px;
   margin-right: 12px;
   vertical-align: middle;
 }
 .login-link_header::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 42%;
   right: 0;
-  height: 2px; /* Höhe des Unterstrichs */
-  background-color: #fff; /* Farbe des Unterstrichs */
-  transform: scaleX(0); /* Setze die horizontale Skalierung auf 0, um den Unterstrich zu verstecken */
+  width: 13%;
+  transform: translateX(300px);
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
   transform-origin: bottom left;
-  transition: transform 0.3s ease; /* Übergangseigenschaften */
+  transition: transform 0.3s ease;
 }
 
 .login-link_header:hover::before {
-  transform: scaleX(1); /* Setze die horizontale Skalierung auf 1, um den Unterstrich anzuzeigen */
+  transform: scaleX(
+    1
+  ); /* Setze die horizontale Skalierung auf 1, um den Unterstrich anzuzeigen */
 }
 .navigation {
-  display:flex;
+  display: flex;
   justify-content: space-around;
+  list-style: none;
 }
 
 .user-icon_header {
